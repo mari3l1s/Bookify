@@ -1,0 +1,45 @@
+<div class="card">
+    <div class="card-image">
+        <img [src]="business.image" [alt]="business.name">
+        <span class="badge" [ngStyle]="{'background-color': businessTypeColors[business.type]}">
+            {{businessTypeLabels[business.type]}}
+        </span>
+    </div>
+
+    <div class="card-content">
+        <div class="card-header">
+            <h3> {{business.name}} </h3>
+            <div class="rating">
+                <i class="bi bi-star-fill"></i>
+                <span> {{business.rating}} </span>
+            </div>
+        </div>
+
+        <p class="description"> {{business.description}} </p>
+
+        <div class="info">
+            <div class="info-item">
+                <i class="bi bi-geo-alt"></i>
+                <span> {{business.address}} </span>
+            </div>
+            <div class="info-item">
+                <i class="bi bi-clock"></i>
+                <span> {{business.openingHours}} </span>
+            </div>
+            <div class="info-item">
+                <i class="bi bi-telephone"></i>
+                <span> {{business.phone}} </span>
+            </div>
+        </div>
+
+        <div class="amenities">
+            <span *ngFor="let amenity of business.amenities.slice(0, 3)" class="tag">
+                {{amenity}}
+            </span>
+        </div>
+
+        <button class="details-btn" (click)="onViewDetailsClick()">
+            Ver detalles y reservar
+        </button>
+    </div>
+</div>

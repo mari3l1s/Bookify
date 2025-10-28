@@ -1,0 +1,65 @@
+.user-panel {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #f3e8ff, #ffffff, #eef2ff);
+  padding: 2rem;
+
+  .header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    margin-top: 8rem;
+    text-align: left;
+    h1 {
+      font-size: 2rem;
+      color: #333;
+    }
+    p {
+      color: #666;
+    }
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    .stat-card {
+      padding: 1rem;
+      border-radius: 1rem;
+      color: white;
+      text-align: left;
+      height: 5rem;
+
+      &.purple { background: linear-gradient(to right, #8b5cf6, #7c3aed); }
+      &.green { background: linear-gradient(to right, #22c55e, #16a34a); }
+      &.amber { background: linear-gradient(to right, #f59e0b, #d97706); }
+      &.red { background: linear-gradient(to right, #ef4444, #dc2626); }
+
+      .label { font-size: 1.2rem; opacity: 0.8; }
+      .value { font-size: 2rem; font-weight: bold; margin-top: -1rem;}
+    }
+  }
+
+  .reservations {
+    margin-top: 2rem;
+    h2 {
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1rem;
+    }
+
+    .empty-card {
+      text-align: center;
+      padding: 3rem;
+      background: white;
+      border-radius: 1rem;
+      color: #777;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+  }
+}

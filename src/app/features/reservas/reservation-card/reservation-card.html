@@ -1,0 +1,32 @@
+<div class="reservation-card">
+  <div class="header">
+    <div>
+      <h3>{{ reservation.businessName }}</h3>
+      <span class="badge type">
+        {{ businessTypeLabels[reservation.businessType] }}
+      </span>
+    </div>
+
+    <span
+      class="badge status"
+      [style.backgroundColor]="statusColors[reservation.status]"
+    >
+      {{ statusLabels[reservation.status] }}
+    </span>
+  </div>
+
+  <div class="details">
+    <p><strong>Fecha:</strong> {{ formatDate(reservation.date) }}</p>
+    <p><strong>Hora:</strong> {{ reservation.time }}</p>
+    <p><strong>Personas:</strong> {{ reservation.guests }}</p>
+    <p *ngIf="reservation.notes"><strong>Notas:</strong> {{ reservation.notes }}</p>
+  </div>
+
+  <button
+    *ngIf="reservation.status === 'pending' || reservation.status === 'confirmed'"
+    class="cancel-btn"
+    (click)="cancel.emit(reservation.id)"
+  >
+    Cancelar Reservación
+  </button>
+</div>

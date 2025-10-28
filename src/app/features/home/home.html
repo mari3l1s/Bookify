@@ -1,8 +1,20 @@
 
-<app-navbar />
-
 <section class="hero">
     <h1>Reserva tu experiencia perfecta</h1>
     <p>Encuentra y reserva en restaurantes, hoteles, clínicas y más</p>
-    <button routerLink="">reservaa yaa</button>
+<div class="search-container">
+    <form action="/buscar" method="GET">
+<i class="bi bi-search-heart"></i>
+      <input type="text" placeholder="Buscar por nombre, descripción o ubicación..." name="query" class="search-input">
+      <button type="submit" class="search-button"><i class="bi bi-search-heart"></i>     </button>
+    </form>
+  </div>
+</section>
+
+<section class="business-list">
+  <app-business-card
+    *ngFor="let negocio of businesses; let i = index"
+    [business]="negocio"
+    (viewDetails)="verDetalles($event)">
+  </app-business-card>
 </section>

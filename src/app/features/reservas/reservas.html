@@ -1,1 +1,54 @@
-<p>reservas works!</p>
+
+<div class="user-panel">
+  <div class="header">
+    <h1>Mis Reservaciones</h1>
+    <p>Gestiona todas tus reservaciones en un solo lugar</p>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-card purple">
+      <p class="label">Total</p>
+      <p class="value">{{ userReservations.length }}</p>
+    </div>
+    <div class="stat-card green">
+      <p class="label">Confirmadas</p> 
+ <!--     <p class="value">{{ userReservations.filter(r => r.status === 'confirmed').length }}</p> -->
+    </div>
+    <div class="stat-card amber">
+      <p class="label">Pendientes</p>
+  <!--    <p class="value">{{ userReservations.filter(r => r.status === 'pending').length }}</p>-->
+    </div>
+    <div class="stat-card red">
+      <p class="label">Canceladas</p>
+    <!--  <p class="value">{{ userReservations.filter(r => r.status === 'cancelled').length }}</p>-->
+    </div>
+  </div>
+
+  <section class="reservations">
+    <h2>Próximas Reservaciones</h2>
+    <div *ngIf="upcomingReservations.length; else noUpcoming" class="grid">
+      <app-reservation-card
+        *ngFor="let r of upcomingReservations"
+        [reservation]="r"
+        (cancel)="cancelReservation($event)">
+      </app-reservation-card>
+    </div>
+
+    <ng-template #noUpcoming>
+      <div class="empty-card">
+        <p>No tienes reservaciones próximas</p>
+      </div>
+    </ng-template>
+  </section>
+
+  <section *ngIf="pastReservations.length" class="reservations">
+    <h2>Historial</h2>
+    <div class="grid">
+      <app-reservation-card
+        *ngFor="let r of pastReservations"
+        [reservation]="r"
+        (cancel)="cancelReservation($event)">
+      </app-reservation-card>
+    </div>
+  </section>
+</div>
