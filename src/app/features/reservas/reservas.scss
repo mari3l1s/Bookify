@@ -1,3 +1,7 @@
+* {
+  font-family: sans-serif;
+}
+
 .user-panel {
   min-height: 100vh;
   background: linear-gradient(to bottom right, #f3e8ff, #ffffff, #eef2ff);
@@ -30,10 +34,10 @@
       text-align: left;
       height: 5rem;
 
-      &.purple { background: linear-gradient(to right, #8b5cf6, #7c3aed); }
-      &.green { background: linear-gradient(to right, #22c55e, #16a34a); }
-      &.amber { background: linear-gradient(to right, #f59e0b, #d97706); }
-      &.red { background: linear-gradient(to right, #ef4444, #dc2626); }
+      &.purple { background: linear-gradient(to right, #0077B6, #009bb9); }
+      &.green { background: linear-gradient(to right, #1e8d71, #38a388); }
+      &.amber { background: linear-gradient(to right, #FF6D00, #FF9E00); }
+      &.red { background: linear-gradient(to right, #dc2626, #ef4444); }
 
       .label { font-size: 1.2rem; opacity: 0.8; }
       .value { font-size: 2rem; font-weight: bold; margin-top: -1rem;}

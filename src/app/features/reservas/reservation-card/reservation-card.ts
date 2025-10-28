@@ -28,7 +28,7 @@ export class ReservationCard {
 
   statusColors: any = {
     pending: '#f59e0b',
-    confirmed: '#22c55e',
+    confirmed: '#38a388',
     cancelled: '#ef4444',
     completed: '#9ca3af'
   };
