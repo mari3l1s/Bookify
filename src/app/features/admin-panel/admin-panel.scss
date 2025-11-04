@@ -1,0 +1,98 @@
+:host {
+    display: block;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #f3e8ff, #ffffff, #e0e7ff);
+    padding: 2rem 1rem;
+}
+
+.admin-panel {
+    max-width: 1200px;
+    margin: auto;
+
+    .header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    margin-top: 8rem;
+    text-align: left;
+
+    h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #1f2937;
+    }
+
+    p {
+    color: #666;
+    }
+    }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-bottom: 2rem;
+
+        .stats-card {
+            padding: 1rem;
+            border-radius: 1rem;
+            color: white;
+            text-align: left;
+            height: 5rem;
+
+            &.blue { background: linear-gradient(to right, #0077B6, #009bb9); }
+            &.green { background: linear-gradient(to right, #1e8d71, #38a388); }
+            &.amber { background: linear-gradient(to right, #FF6D00, #FF9E00); }
+            &.red { background: linear-gradient(to right, #dc2626, #ef4444); }
+            
+            .label {font-size: 1.2rem; opacity: 0.8;}
+            .value {font-size: 2rem; font-weight: bold; margin-top: -1rem;}
+
+        }
+
+
+    }
+
+    .filters {
+        background: white;
+        border-radius: 1rem;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+        th, td{
+            padding: 0.75rem;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+
+        th {
+            background-color: #f3f4f6;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        tr:nth-child(even){
+            background-color: #fafafa;
+        }
+
+        .badge {
+            padding: 0.25rem 0.6rem;
+            border-radius: 0.5rem;
+            font-size: 0.75rem;
+            color: white;
+        }
+    }
+
+
+
+
+}

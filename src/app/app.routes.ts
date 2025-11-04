@@ -8,22 +8,11 @@ export const routes: Routes = [
   {
     path: 'reservas',
     loadComponent: () =>
-      import('./features/reservas/reservas').then(m => m.Reservas)
+      import('./features/reservas/reservas').then(m => m.Reservas),
+  },
+  {
+    path: 'admin-panel',
+    loadComponent:() =>
+      import('./features/admin-panel/admin-panel').then(m => m.AdminPanel),
   }
 ];
-
-//export const routes: Routes = [
-//    {path: '', redirectTo: '/home', pathMatch: 'full'},
-//    {
-//        path: 'home',
-//        loadComponent: () =>
-//             import('./features/home/home').then(m => m.Home),
-//    },
-//    {
-//        path: 'mis reservas',
-//        loadComponent: () =>
-//            import('./features/reservas/reservas').then(m => m.Reservas),
-//    },
-//
-//];
-//

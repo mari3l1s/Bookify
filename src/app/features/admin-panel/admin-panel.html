@@ -1,0 +1,80 @@
+<div class="admin-panel">
+
+        <div class="header">
+            <h1>Panel Administrativo</h1>
+            <p>Gestiona todas las reservas de tu negocio</p>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stats-card blue">
+                <p class="label">total reservaciones</p>
+                <p class="value">codigo </p>
+            </div>
+
+            <div class="stats-card green">
+                <p class="label">pendientes</p>
+                <p class="value">codigo</p>
+            </div>
+
+            <div class="stats-card amber">
+                <p class="label">Confirmadas</p>
+                <p class="value">codigo</p>
+            </div>
+
+            <div class="stats-card red">
+                <p class="label">Canceladas</p>
+                <p class="value">codigo</p>
+            </div>
+        </div>
+
+        <div class="filters">
+            <div class="header filters">
+                <h1>filters</h1>
+            </div>
+            <div class="negocios">
+                <label for="negocios">
+                    negocios
+                </label>
+
+                <select name="negocios" id="">
+                    <option value="hotel">hotel</option>
+                    <option value="spa">sopa</option>
+                    <option value="restaurante">restaurnante</option>
+                </select>
+            </div>
+            <div class="estado">
+                <label for="estados">estados</label>
+                <select name="estados" id="">
+                    <option value="pendiente">pendiente</option>
+                    <option value="Confirmada">Confirmada</option>
+                    <option value="cancelada">cancelada</option>
+                    <option value="completada">completada</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="AdminTable">
+            <div class="header">
+                <p>reservaciones</p>
+            </div>
+
+            <div class="table">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>negocio</th>
+                        <th>cliente</th>
+                        <th>contacto</th>
+                        <th>fecha</th>
+                        <th>hora</th>
+                        <th>personas</th>
+                        <th>estado</th>
+                        <th>acciones</th>
+                    </tr>
+                    </thead>
+
+                </table>
+            </div>
+        </div>
+</div>
